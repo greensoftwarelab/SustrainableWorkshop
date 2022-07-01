@@ -71,5 +71,5 @@ The application is currently instrumented with @HunterDebug annotations in order
  - The application uses some auxiliary APIs to manipulate data files and images. Evaluate the impact of any changes in the energy consumption of the application. Suggestions:
 
 - Changed Image loading method ([Picasso](https://square.github.io/picasso/), [Glide](https://github.com/bumptech/glide));
-- Changed JSON loading and handling library([GSON](https://github.com/google/gson), [others](https://www.appbrain.com/stats/libraries/tag/json/ json-parsing-libraries));
+- Changed JSON loading and handling library([GSON](https://github.com/google/gson), [others](https://www.appbrain.com/stats/libraries/tag/json/json-parsing-libraries));
 - Change of data loading strategy (CSV, DB with sqlite);
