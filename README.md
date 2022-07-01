@@ -12,8 +12,6 @@
 - Python >= 3.6;
 - 1 Android device;
 - Android Studio;
-- SonarQube;
-- E-debitum;
 - E-Manafa;
 - Sample app.
 
