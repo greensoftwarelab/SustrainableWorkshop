@@ -66,9 +66,9 @@ The application is currently instrumented with @HunterDebug annotations in order
 
 1. This application contains several energy smells reported in the literature and listed in: xx. These smells can be identified manually, through SonarQube's E-debitum plugin or through Lint. The application contains 4 smells in its source code, and it also has a false positive according to the information provided by E-debitum and an additional smell in XML files. Identify the smells contained in the application and measure the consumption of the methods where they are embedded and check if their resolution results in performance gains. To perform the energy measurement, use the following procedure:
 
- - In addition to the smells found, there are several energy hotspots that can be improved through simple refactorings. Identify these hotspots with the help of E-Manafa (by consulting the consumption of the application methods) and propose or implement improvements that benefit your energy consumption. Hints: change of image loading method, object caching.
+2.  In addition to the smells found, there are several energy hotspots that can be improved through simple refactorings. Identify these hotspots with the help of E-Manafa (by consulting the consumption of the application methods) and propose or implement improvements that benefit your energy consumption. Hints: change of image loading method, object caching.
 
- - The application uses some auxiliary APIs to manipulate data files and images. Evaluate the impact of any changes in the energy consumption of the application. Suggestions:
+3. The application uses some auxiliary APIs to manipulate data files and images. Evaluate the impact of any changes in the energy consumption of the application. Suggestions:
 
 - Changed Image loading method ([Picasso](https://square.github.io/picasso/), [Glide](https://github.com/bumptech/glide));
 - Changed JSON loading and handling library([GSON](https://github.com/google/gson), [others](https://www.appbrain.com/stats/libraries/tag/json/json-parsing-libraries));
