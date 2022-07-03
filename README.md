@@ -79,6 +79,6 @@ Note: The application is currently instrumented with @HunterDebug annotations in
 
 3. The application uses some auxiliary APIs to manipulate data files and images. Evaluate the impact of any changes in the energy consumption of the application. Suggestions:
 
-- Changed Image loading method in the onBindViewHolder method (suggestion: use [Picasso](https://square.github.io/picasso/) or [Glide](https://github.com/bumptech/glide));
+- Change the Image loading method in the onBindViewHolder method (Hint: use [Picasso](https://square.github.io/picasso/) or [Glide](https://github.com/bumptech/glide));
 - Change JSON loading and handling library([GSON](https://github.com/google/gson), [others](https://www.appbrain.com/stats/libraries/tag/json/json-parsing-libraries));
-- Change of data loading strategy (CSV, DB with sqlite);
+- Change the data format (from JSON to CSV, DB with sqlite);
