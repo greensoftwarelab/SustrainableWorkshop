@@ -1,7 +1,8 @@
 
+
 # SustrainableWorkshop
 
-**Group work**: 2 -3 elements.
+**Group work**: 2-3 elements.
 **Duration**: 90 mins.
 
 ## Installation / Setup
@@ -56,7 +57,7 @@ After the monitoring process, some results are reported on the command line. The
 
 In this exercise, we will try to show how a developer can detect and repair some energy smells present in his source code using our toolset. Furthermore, you will need the analyze the source code of the demo app previously downloaded. First of all, you must open the application in the Android Studio IDE previously downloaded and build and install the application on your device, to verify that you have all the requirements to compile, build and execute the application on the device.
 
-This application is illustrative of the typical pattern of Android development. It was developed in Java and built using the Gradle build system. It presents several types of views/screens (also known as Activities and Fragments) that are defined in XML format and loaded and transformed through Java classes. Each Java class extending an Activity or Fragment represents a part of the UI of the application. This demo application is a very simple soccer quiz, that loads a set of questions (transformed into Question models) from a questions.json file that is located in a specific resources directory (res/raw). These questions also contain associated images, which are contained in the /res/drawable folder. These questions are loaded into a well-known data structure in the ViewModel class and then used in 2 different views: QuestionListFragment and SingleQuestionFragment.
+This application is illustrative of the typical pattern of Android development. It was developed in Java and built using the Gradle build system. It presents several types of views/screens (also known as Activities and Fragments) that are defined in XML format and loaded and transformed through Java classes. Each Java class extending an Activity or Fragment represents a part of the UI of the application. This demo application is a very simple soccer quiz, that loads a set of questions (transformed into Question models) from a questions.json file that is located in a specific resources directory (res/raw). These questions also contain associated images, which are contained in the /res/drawable folder. These questions are loaded into a well-known data structure in the ViewModel class and then used in 2 different views: QuestionListFragment and SingleQuestionFragment.
 
  Below is a diagram that illustrates the typical pattern of navigation over the various views of the application, as well as which components are used in each view.
 
@@ -64,7 +65,15 @@ This application is illustrative of the typical pattern of Android development. 
 
 Note: The application is currently instrumented with @HunterDebug annotations in order to be able to trace the application methods that are invoked and estimate the energy consumption. Do not remove these annotations and include them in new methods that you might implement during the exercises.
 
-1. This application contains several energy smells reported in the literature and listed in this [catalog](). These smells can be identified manually, through SonarQube's E-Debitum plugin or through the Lint that is used by the Android Studio. The application contains at least 4 smells in its source code, and it also has a false positive according to the information provided by E-debitum and an additional smell in one of the XML files. Identify the smells contained in the application and measure the consumption of the methods where they are embedded. Evaluate if their resolution results in performance gains. To evaluate the impact of the smells in the source code and conduct the energy measurements, execute the following steps: a) Identify the methods with the energy smells a) Start e-manafa from your CLI b) Run the application using Android Studio. d) Perform some work over the application to force the invocation of the methods. e) stop e-manafa and collect the results (the consumption of the smelly- methods) f) Refactor the smells using the proposed solutions in the catalog. g) Repeat the previous steps until f) and compare the consumption of the methods.  h) Justify the obtained results. 
+1. This application contains several energy smells reported in the literature and listed in this [catalog](). These smells can be identified manually, through SonarQube's E-Debitum plugin or through the Lint that is used by the Android Studio. The application contains at least 4 smells in its source code, and it also has a false positive according to the information provided by E-debitum and an additional smell in one of the XML files. Identify the smells contained in the application and measure the consumption of the methods where they are embedded. Evaluate if their resolution results in performance gains. To evaluate the impact of the smells in the source code and conduct the energy measurements, execute the following steps: 
+	- a) Identify the methods with energy smells.
+	- b) Start e-manafa from your CLI.
+	- c) Run the application using Android Studio.
+	- d) Perform some interactions over the application UI to force the invocation of its methods. 
+	- e) stop e-manafa and collect the relevant results (the consumption of the *smelly* methods.
+	-  f) Refactor the smells using the proposed solutions in the catalog. 
+	- g) Repeat the previous steps until f) and compare the consumption of the methods. 
+	-  h) Justify the obtained results. 
 
 2. In addition to the smells found, several energy hotspots can be improved through simple refactorings. Identify these hotspots with the help of E-Manafa (by examining the consumption of the application methods) and propose or implement improvements that benefit your energy consumption. Hints: change of image loading method, object caching.
 
