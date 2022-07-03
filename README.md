@@ -9,19 +9,19 @@
 
 
 ### 1. Requirements:
-- Linux / Mac OS;
+- Linux / Mac OS pc/workstation. 
 - Python >= 3.6;
 - Java >= 8;
-- 1 Android device;
 - Android Studio IDE(and consequently, Android SDK);
-- E-Manafa;
+- 1 Android device;
+- E-Manafa profiler;
 - Demo app;
 - BasiC Java / OOP knowledge.
 
 
 
 ### 2. Android device setup
- You will need an Android device (at least one per group) to do all the exercises proposed in this workshop. You can use your personal Android device, the software that will be executed does not deal with or extracts any sensitive information and is completely open-source since it only extracts battery-related metrics that are obtained during the execution of the exercises. In order to activate the developer features on your Android device and establish a communication channel with your PC, it is necessary to activate the developer's options in your device's settings. The procedure for enabling the necessary settings differs slightly between vendors and platform versions.
+ You will need an Android device (at least one per group) to do all the exercises proposed in this workshop. You can use your personal Android device since the software that will be executed does not deal with or extracts any sensitive information and is completely open-source since. It only extracts battery-related metrics that are obtained during the exercises. In order to activate the developer features on your Android device and establish a communication channel with your PC, it is necessary to activate the developer's options in your device's settings. The procedure for enabling the necessary settings differs slightly between vendors and platform versions.
  The process can be performed by following these steps:
  
  1. Go to "Settings", then tap "About device" or "About phone". Scroll down, then tap "Build number" seven times. Depending on your device and operating system, you may need to tap "Software information", then tap "Build number" seven times. 3 Enter your pattern, PIN or password to enable the Developer options menu. This process will give you access to a wide set of features that are available in **Settings** -> **Developer Options**.
