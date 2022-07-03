@@ -1,4 +1,4 @@
-
+  
 
 # SustrainableWorkshop
 
@@ -24,7 +24,7 @@
  You will need an Android device (at least one per group) to do all the exercises proposed in this workshop. You can use your personal Android device since the software that will be executed does not deal with or extracts any sensitive information. The process is completely open-source and only extracts battery-related metrics that are obtained during the execution of the E-Manafa. In order to activate the developer features on your Android device and establish a communication channel with your PC, you need to activate the developer's options in your device's settings. The procedure for enabling the necessary settings differs slightly between vendors and platform versions, but the differences are not significant.
  The process can be performed by following these steps (with potentially some minor differences):
  
- 1. Go to "Settings", then tap "About device" or "About phone". Scroll down, then tap "Build number" seven times. Depending on your device and operating system, you may need to tap "Software information", then tap "Build number" seven times. 3 Enter your pattern, PIN or password to enable the Developer options menu. This process will give you access to a wide set of features that are available in **Settings** -> **Developer Options**.
+ 1. Go to "Settings", then tap "About device" or "About phone". Scroll down, then tap "Build number" seven times. Depending on your device and operating system, you may need to tap "Software information", then tap "Build number" seven times. Enter your pattern, PIN or password to enable the Developer options menu. This process will give you access to a wide set of features that are available in **Settings** -> **Developer Options**.
  2. Go to these settings and enable the following features: **USB debugging** and **Install via USB**.
  3. Increase the **Logger Buffer Size** to at least 4MB.
  
@@ -32,7 +32,7 @@
 
 You also going to need a *Nix OS with Android Studio and Android SDK 30 (Android 10) (it can be selected during the Android Studio installation process). The rest of the installation process can be performed by following these steps: 
 1. **Install Android Studio IDE:** Go to the [Android Studio Web Page](https://developer.android.com/studio),  download the latest stable version, and follow the installation instructions. 
-2. **Install E-Manafa Profiler:**  `pip install manafa`
+2. **Install E-Manafa Profiler:**  `pip install manafa`.
 3. Clone Android application: `git clone https://github.com/greensoftwarelab/SampleAndroidApp.git`
 4. Finally, open the app on the Android Studio IDE and try to execute it on your device (Click on run), connected via USB to your computer. If the application main screen appears on your Android device, everything worked as supposed.
 5. Try to execute E-Manafa with your device (once again, connected via USB). Try to replicate the process illustrated in this [demo video](https://www.youtube.com/watch?v=vklLgv2_iNo). if everything works like in the video, you are ready to go.  Note: If the installation process or the commands fails, try executing E-Manafa by especifying the full path of the executable (something like `python3 /usr/local/lib/python3.9/site-packages/manafa/main.py`) or from the [sources](https://greensoftwarelab.github.io/e-manafa).
@@ -41,13 +41,13 @@ You also going to need a *Nix OS with Android Studio and Android SDK 30 (Android
 ## Exercise I: Black-Box testing
 
  In this exercise, we intend to see potentially interesting results that can be gathered from the dynamic execution of the proposed procedure in different devices and setups. In this procedure, it is intended to use some of the previously installed tools to measure the energy consumption associated with sending instant messages using real-world applications. In order to be able to estimate the energy of this task, we need  the following toolset:
-	- An instant messaging application (WhatsApp, Facebook Messenger, Google Chat, Telegram, Slack, etc);
-	- A tool capable of estimating the energy consumption of a task or system during its execution (E-Manafa);
-	- A set of guidelines to avoid interference in the measurements: Close other apps, disable notifications, turn off unused sensors and hardware components, mute notifications, etc.
+- An instant messaging application (WhatsApp, Facebook Messenger, Google Chat, Telegram, Slack, etc);
+- A tool capable of estimating the energy consumption of a task or system during its execution (E-Manafa);
+- A set of guidelines to avoid interference in the measurements: Close other apps, disable notifications, turn off unused sensors and hardware components, mute notifications, etc.
 
 Furthermore, in order to estimate the energy consumed by the process, follow the following steps:
 	
-1. Select one of the suggested messaging apps. Monitor the consumption of sending a message to a random subject (preferably, a subject that unlikely will see the message and respond to it during the execution of the process). The testing process must include the step of opening the application from the menu, selecting a receiver, and sending the following message, typed using your default keyboard: ”Hi. Please ignore this message. I'm participating in an empirical study aiming to analyze the energy performance of instant messaging apps”. To monitor the energy consumption of the process, invoke the `emanafa` command using a CLI and press any key right after sending the message.
+1. Select one of the suggested messaging apps. Monitor the consumption of sending a message to a random subject (preferably, a subject that unlikely will see the message and respond to it during the execution of the process). The testing process must include the step of opening the application from the menu/launcher, selecting a receiver and sending the following message, typed using your default keyboard: ”Hi. Please ignore this message. I'm participating in an empirical study aiming to analyze the energy performance of instant messaging apps”. To monitor the energy consumption of the process, invoke the `emanafa` command using a CLI and press any key right after sending the message.
 After the monitoring process, some results are reported on the command line. These results can also be seen in a visually appealing format, by submitting the results files ( files with a name like manafa_resume_XXXX.YYYY.json that will be created in your working directory) to the dashboard available at https://greensoftwarelab.github.io/manafa-inspector).
 3. Repeat the process 2 more times.
 4. Fill the table available at https://docs.google.com/spreadsheets/d/1DDpp8MHGrUcVs-Gnt0PRTiRQKvvb_rsmPgSnU6uEl1A/edit?usp=sharing with the values  obtained in each of the 3 tests. Fill the form available at https://forms.gle/ZdZWrtZWQxwWWSVm8.
@@ -59,7 +59,7 @@ In this exercise, we will try to show how a developer can detect and repair some
 
 This application is illustrative of the typical pattern of Android development. It was developed in Java and built using the Gradle build system. It presents several types of views/screens (also known as Activities and Fragments) that are defined in XML format and loaded and transformed through Java classes. Each Java class extending an Activity or Fragment represents a part of the UI of the application. This demo application is a very simple soccer quiz, that loads a set of questions (transformed into Question models) from a questions.json file that is located in a specific resources directory (res/raw). These questions also contain associated images, which are contained in the /res/drawable folder. These questions are loaded into a well-known data structure in the ViewModel class and then used in 2 different views: QuestionListFragment and SingleQuestionFragment.
 
- Below is a diagram that illustrates the typical pattern of navigation over the various views of the application, as well as which components are used in each view.
+ Below is a diagram that illustrates the typical pattern of navigation over the various views of the application, as well as some components used in each view.
 
 ![diagram](https://github.com/greensoftwarelab/SustrainableWorkshop/blob/main/flow_diagram.png)
 
