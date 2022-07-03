@@ -61,7 +61,7 @@ This application is illustrative of the typical pattern of Android development. 
 
  Below is a diagram that illustrates the typical pattern of navigation over the various views of the application, as well as which components are used in each view.
 
-
+![diagram](https://github.com/greensoftwarelab/SustrainableWorkshop/blob/main/flow_diagram.png)
 
 Note: The application is currently instrumented with @HunterDebug annotations in order to be able to trace the application methods that are invoked and estimate the energy consumption. Do not remove these annotations and include them in new methods that you might implement during the exercises.
 
