@@ -30,7 +30,7 @@
  
 ### 3.  Workstation setup
 
-You also going to need a *Nix computer with Android Studio and Android SDK 30 (Android 10) (it can be selected during the Android Studio installation process). The rest of the installation process can be performed by following these steps: 
+You also going to need a *Nix OS with Android Studio and Android SDK 30 (Android 10) (it can be selected during the Android Studio installation process). The rest of the installation process can be performed by following these steps: 
 1. **Install Android Studio IDE:** Go to the [Android Studio Web Page](https://developer.android.com/studio),  download the latest stable version, and follow the installation instructions. 
 2. **Install E-Manafa Profiler:**  `pip install manafa`
 3. Clone Android application: `git clone https://github.com/greensoftwarelab/SampleAndroidApp.git`
