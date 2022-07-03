@@ -30,7 +30,7 @@
  
 ### 3.  Workstation setup
 
-You also going to need a *Nix computer with Android Studio and Android SDK (that is installed when Android Studio is installed) installed. The installation process can be performed by following these steps: 
+You also going to need a *Nix computer with Android Studio and Android SDK 30 (Android 10) (it can be selected during the Android Studio installation process). The rest of the installation process can be performed by following these steps: 
 1. **Install Android Studio IDE:** Go to the [Android Studio Web Page](https://developer.android.com/studio),  download the latest stable version, and follow the installation instructions. 
 2. **Install E-Manafa Profiler:**  `pip install manafa`
 3. Clone Android application: `git clone https://github.com/RRua/sampleapp.git`
@@ -42,12 +42,12 @@ You also going to need a *Nix computer with Android Studio and Android SDK (that
 
  In this exercise, we intend to see potentially interesting results that can be gathered from the dynamic execution of the proposed procedure in different devices and setups. In this procedure, it is intended to use some of the previously installed tools to measure the energy consumption associated with sending instant messages using real-world applications. In order to be able to estimate the energy of this task, we need  the following toolset:
 	- An instant messaging application (WhatsApp, Facebook Messenger, Google Chat, Telegram, Slack, etc);
-	- A tool capable of estimating the energy consumption of the task or the system during its execution (E-Manafa).
+	- A tool capable of estimating the energy consumption of a task or system during its execution (E-Manafa);
 	- A set of guidelines to avoid interference in the measurements: Close other apps, disable notifications, turn off unused sensors and hardware components, mute notifications, etc.
 
 Furthermore, in order to estimate the energy consumed by the process, follow the following steps:
 	
-1. Select one of the suggested messaging apps. Monitor the consumption of sending a message to a random subject (preferably, a subject that unlikely will see the message and respond to it during the execution of the process). The testing process must include the step of opening the application from the menu, selecting a receiver, and sending the following message, typed using your default keyboard: ”Hi. Please ignore this message. I'm participating in an empirical study aiming to analyze the energy performance of instant messaging apps”. To monitor the energy consumption of the process, invoke the following command using a CLI and press any key right after sending the message: `emanafa` Note: If the installation process or the commands failed, try executing E-Manafa from the [sources](https://greensoftwarelab.github.io/e-manafa).
+1. Select one of the suggested messaging apps. Monitor the consumption of sending a message to a random subject (preferably, a subject that unlikely will see the message and respond to it during the execution of the process). The testing process must include the step of opening the application from the menu, selecting a receiver, and sending the following message, typed using your default keyboard: ”Hi. Please ignore this message. I'm participating in an empirical study aiming to analyze the energy performance of instant messaging apps”. To monitor the energy consumption of the process, invoke the following command using a CLI and press any key right after sending the message: `emanafa` Note: If the installation process or the commands fails, try executing E-Manafa from the [sources](https://greensoftwarelab.github.io/e-manafa).
 After the monitoring process, some results are reported on the command line. These results can also be seen in a visually appealing format, by submitting the results file (manafa_resume xxx.yyyy.json) to the dashboard available at https://greensoftwarelab.github.io/manafa-inspector).
 3. Repeat the process 2 more times.
 4. Fill the table available at https://gdrive....sdasdas with the values obtained in the 3 tests and the form available at (https://xxxxxxx).
