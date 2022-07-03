@@ -50,7 +50,7 @@ Furthermore, in order to estimate the energy consumed by the process, follow the
 1. Select one of the suggested messaging apps. Monitor the consumption of sending a message to a random subject (preferably, a subject that unlikely will see the message and respond to it during the execution of the process). The testing process must include the step of opening the application from the menu, selecting a receiver, and sending the following message, typed using your default keyboard: ”Hi. Please ignore this message. I'm participating in an empirical study aiming to analyze the energy performance of instant messaging apps”. To monitor the energy consumption of the process, invoke the `emanafa` command using a CLI and press any key right after sending the message.
 After the monitoring process, some results are reported on the command line. These results can also be seen in a visually appealing format, by submitting the results files ( files with a name like manafa_resume_XXXX.YYYY.json that will be created in your working directory) to the dashboard available at https://greensoftwarelab.github.io/manafa-inspector).
 3. Repeat the process 2 more times.
-4. Fill the table available at with the values of CPU and wi-fi energy consumption and runtime obtained in the 3 tests. Fill the form available at https://forms.gle/ZdZWrtZWQxwWWSVm8.
+4. Fill the table available at https://docs.google.com/spreadsheets/d/1DDpp8MHGrUcVs-Gnt0PRTiRQKvvb_rsmPgSnU6uEl1A/edit?usp=sharing with the values  obtained in each of the 3 tests. Fill the form available at https://forms.gle/ZdZWrtZWQxwWWSVm8.
 
 
 # Exercise II Detecting and Repairing Energy Smells in Android source code
