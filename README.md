@@ -12,10 +12,10 @@
 - Linux / Mac OS pc/workstation. 
 - Python >= 3.6;
 - Java >= 8;
-- Android Studio IDE(and consequently, Android SDK);
+- Android Studio IDE (and consequently, Android SDK);
 - 1 Android device;
 - E-Manafa profiler;
-- Demo app;
+- Demo Android application;
 - BasiC Java / OOP knowledge.
 
 
@@ -33,7 +33,7 @@
 You also going to need a *Nix computer with Android Studio and Android SDK 30 (Android 10) (it can be selected during the Android Studio installation process). The rest of the installation process can be performed by following these steps: 
 1. **Install Android Studio IDE:** Go to the [Android Studio Web Page](https://developer.android.com/studio),  download the latest stable version, and follow the installation instructions. 
 2. **Install E-Manafa Profiler:**  `pip install manafa`
-3. Clone Android application: `git clone https://github.com/RRua/sampleapp.git`
+3. Clone Android application: `git clone https://github.com/greensoftwarelab/SampleAndroidApp.git`
 4. Finally, open the app on the Android Studio IDE and try to execute it on your device (Click on run), connected via USB to your computer. If the application main screen appears on your Android device, everything worked as supposed.
 5. Try to execute E-Manafa with your device (once again, connected via USB). Try to replicate the process illustrated in this [demo video](https://www.youtube.com/watch?v=vklLgv2_iNo). if everything works like in the video, you are ready to go. 
 
@@ -50,7 +50,7 @@ Furthermore, in order to estimate the energy consumed by the process, follow the
 1. Select one of the suggested messaging apps. Monitor the consumption of sending a message to a random subject (preferably, a subject that unlikely will see the message and respond to it during the execution of the process). The testing process must include the step of opening the application from the menu, selecting a receiver, and sending the following message, typed using your default keyboard: ”Hi. Please ignore this message. I'm participating in an empirical study aiming to analyze the energy performance of instant messaging apps”. To monitor the energy consumption of the process, invoke the following command using a CLI and press any key right after sending the message: `emanafa` Note: If the installation process or the commands fails, try executing E-Manafa from the [sources](https://greensoftwarelab.github.io/e-manafa).
 After the monitoring process, some results are reported on the command line. These results can also be seen in a visually appealing format, by submitting the results file (manafa_resume xxx.yyyy.json) to the dashboard available at https://greensoftwarelab.github.io/manafa-inspector).
 3. Repeat the process 2 more times.
-4. Fill the table available at https://gdrive....sdasdas with the values obtained in the 3 tests and the form available at (https://xxxxxxx).
+4. Fill the table available at with the values of CPU and wi-fi energy consumption and runtime obtained in the 3 tests. Fill the form available at https://forms.gle/ZdZWrtZWQxwWWSVm8.
 
 
 # Exercise II Detecting and Repairing Energy Smells in Android source code
@@ -61,7 +61,7 @@ This application is illustrative of the typical pattern of Android development. 
 
  Below is a diagram that illustrates the typical pattern of navigation over the various views of the application, as well as which components are used in each view.
 
-- diagram img url
+
 
 Note: The application is currently instrumented with @HunterDebug annotations in order to be able to trace the application methods that are invoked and estimate the energy consumption. Do not remove these annotations and include them in new methods that you might implement during the exercises.
 
@@ -79,6 +79,6 @@ Note: The application is currently instrumented with @HunterDebug annotations in
 
 3. The application uses some auxiliary APIs to manipulate data files and images. Evaluate the impact of any changes in the energy consumption of the application. Suggestions:
 
-- Changed Image loading method ([Picasso](https://square.github.io/picasso/), [Glide](https://github.com/bumptech/glide));
-- Changed JSON loading and handling library([GSON](https://github.com/google/gson), [others](https://www.appbrain.com/stats/libraries/tag/json/json-parsing-libraries));
+- Changed Image loading method in the onBindViewHolder method (suggestion: use [Picasso](https://square.github.io/picasso/) or [Glide](https://github.com/bumptech/glide));
+- Change JSON loading and handling library([GSON](https://github.com/google/gson), [others](https://www.appbrain.com/stats/libraries/tag/json/json-parsing-libraries));
 - Change of data loading strategy (CSV, DB with sqlite);
