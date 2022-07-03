@@ -21,7 +21,7 @@
 
 
 ### 2. Android device setup
- You will need an Android device (at least one per group) to do all the exercises proposed in this workshop. You can use your personal Android device since the software that will be executed does not deal with or extracts any sensitive information and is completely open-source. It only extracts battery-related metrics that are obtained during the exercises. In order to activate the developer features on your Android device and establish a communication channel with your PC, it is necessary to activate the developer's options in your device's settings. The procedure for enabling the necessary settings differs slightly between vendors and platform versions.
+ You will need an Android device (at least one per group) to do all the exercises proposed in this workshop. You can use your personal Android device since the software that will be executed does not deal with or extracts any sensitive information and is completely open-source. It only extracts battery-related metrics that are obtained during the exercises. In order to activate the developer features on your Android device and establish a communication channel with your PC, you need to activate the developer's options in your device's settings. The procedure for enabling the necessary settings differs slightly between vendors and platform versions.
  The process can be performed by following these steps:
  
  1. Go to "Settings", then tap "About device" or "About phone". Scroll down, then tap "Build number" seven times. Depending on your device and operating system, you may need to tap "Software information", then tap "Build number" seven times. 3 Enter your pattern, PIN or password to enable the Developer options menu. This process will give you access to a wide set of features that are available in **Settings** -> **Developer Options**.
@@ -30,12 +30,12 @@
  
 ### 3.  Workstation setup
 
-You also going to need a *Nix Workstation with Android Studio and Android SDK(it is installed when you install Android Studio) installed. The installation process can be performed by following these steps: 
+You also going to need a *Nix computer with Android Studio and Android SDK (that is installed when Android Studio is installed) installed. The installation process can be performed by following these steps: 
 1. **Install Android Studio IDE:** Go to the [Android Studio Web Page](https://developer.android.com/studio),  download the latest stable version, and follow the installation instructions. 
 2. **Install E-Manafa Profiler:**  `pip install manafa`
 3. Clone Android application: `git clone https://github.com/RRua/sampleapp.git`
-4. Finally, open the app on the Android Studio IDE and try to execute it on your device (Click on run), connected via USB to your workstation. If the application appears on your device, everything worked.
-5. Try to execute E-Manafa with your device (once again, connected via USB to your workstation). Try to replicate the process illustrated in this [demo video](https://www.youtube.com/watch?v=vklLgv2_iNo). if everything works like in the video, you are ready to go. 
+4. Finally, open the app on the Android Studio IDE and try to execute it on your device (Click on run), connected via USB to your computer. If the application main screen appears on your Android device, everything worked as supposed.
+5. Try to execute E-Manafa with your device (once again, connected via USB). Try to replicate the process illustrated in this [demo video](https://www.youtube.com/watch?v=vklLgv2_iNo). if everything works like in the video, you are ready to go. 
 
 
 ## Exercise I: Black-Box testing
