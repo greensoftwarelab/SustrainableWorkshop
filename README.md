@@ -12,7 +12,7 @@
 - Python >= 3.6;
 - Java >= 8;
 - 1 Android device;
-- Android Studio (and consequently, Android SDK);
+- Android Studio IDE(and consequently, Android SDK);
 - E-Manafa;
 - Demo app;
 
@@ -30,9 +30,11 @@
 ### 3.  Workstation setup
 
 The process can be performed by following these steps: 
-1. **Install Android Studio:** Go to the [Android Studio Web Page](https://developer.android.com/studio),  download the latest stable version and follow the installation instructions. 
+1. **Install Android Studio IDE:** Go to the [Android Studio Web Page](https://developer.android.com/studio),  download the latest stable version and follow the installation instructions. 
 2. **Install E-Manafa Profiler:**  `pip install manafa`
 3. Clone Android application: `git clone https://github.com/RRua/sampleapp.git`
+4. Finally, open the app on the Android Studio IDE and try to execute it on your device (Click on run), connected via USB to your workstation. If the application appears on your device, everything worked.
+5. Try to execute E-Manafa in your device (once again, connected via USB to your workstation). Try to replicate the process illustrated in this demo video <>. if everything works like in the video, you are ready to go. 
 
 
 ## Exercise I: Black-Box testing
