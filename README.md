@@ -15,62 +15,60 @@
 - Android Studio IDE(and consequently, Android SDK);
 - E-Manafa;
 - Demo app;
+- BasiC Java / OOP knowledge.
 
 
 
 ### 2. Android device setup
- In order to activate the developer features on your Android device and be able to establish a communication channel with your PC, it is necessary to activate the developers options in your device's settings. The procedure for enabling the necessary settings differs slightly between vendors and platform versions.
+ You are going to need an Android device (at least one per group) to do all the exercises proposed in this workshop. You can use your personal Android device, the software that will be executed does not deals with or extracts any sensitive information and is completly open-source, since it only extracts battery related metrics that are obtained during the execution of the exercises. In order to activate the developer features on your Android device and be able to establish a communication channel with your PC, it is necessary to activate the developers options in your device's settings. The procedure for enabling the necessary settings differs slightly between vendors and platform versions.
  The process can be performed by following these steps:
  
-
  1. Go to "Settings", then tap "About device" or "About phone". Scroll down, then tap "Build number" seven times. Depending on your device and operating system, you may need to tap "Software information", then tap "Build number" seven times. 3 Enter your pattern, PIN or password to enable the Developer options menu. This process will give you access to a wide set of features that are available in **Settings** -> **Developer Options**.
  2. Go to these settings and enable the following features: **USB debugging** and **Install via USB**.
  3. Increase the **Logger Buffer Size** to at least 4MB.
  
 ### 3.  Workstation setup
 
-The process can be performed by following these steps: 
+You also going to need an *Nix Workstation with Android studio and Android SDK(it is installed when you install Android Studio) installed. The installation process can be performed by following these steps: 
 1. **Install Android Studio IDE:** Go to the [Android Studio Web Page](https://developer.android.com/studio),  download the latest stable version and follow the installation instructions. 
 2. **Install E-Manafa Profiler:**  `pip install manafa`
 3. Clone Android application: `git clone https://github.com/RRua/sampleapp.git`
 4. Finally, open the app on the Android Studio IDE and try to execute it on your device (Click on run), connected via USB to your workstation. If the application appears on your device, everything worked.
-5. Try to execute E-Manafa in your device (once again, connected via USB to your workstation). Try to replicate the process illustrated in this demo video <>. if everything works like in the video, you are ready to go. 
+5. Try to execute E-Manafa in your device (once again, connected via USB to your workstation). Try to replicate the process illustrated in this [demo video](https://www.youtube.com/watch?v=vklLgv2_iNo). if everything works like in the video, you are ready to go. 
 
 
 ## Exercise I: Black-Box testing
 
- In this exercise, it is intended to use some of the previously installed tools to  measure the energy consumption associated with sending instant messages using  real applications. In order to be able to estimate the energy of this task, we need  the following tool set:
-	 -   An instant messaging application (WhatsApp, Messenger, Google Chat, etc,  Discord, etc);
-	-   A tool capable of estimating the energy consumption of the task or the  system during its execution (E-Manafa).
-	- A set of guidelines to avoid interference in the measurements: Close other  apps, turn off unused sensors and hardware components, mute notifications,  etc.
+ In this exercise, we intend to see potentially interesting results that can be gathered from the dynamic execution of the proposed procedure in different devices and setups. In this procedure, it is intended to use some of the previously installed tools to measure the energy consumption associated with sending instant messages using real-world applications. In order to be able to estimate the energy of this task, we need  the following tool set:
+	- An instant messaging application (WhatsApp, Facebook Messenger, Google Chat, Telegram, Slack, etc);
+	- A tool capable of estimating the energy consumption of the task or the  system during its execution (E-Manafa).
+	- A set of guidelines to avoid interference in the measurements: Close other apps, disable notifications, turn off unused sensors and hardware components, mute notifications, etc.
 
-Furthermore, in order to estimate the energy consumed by the process, follow the  following steps:
+Furthermore, in order to estimate the energy consumed by the process, follow the following steps:
 	
-1. Select one of the suggested messaging apps. Monitor the consumption of  sending a message to a random subject. The process must include the step of  opening the application from the menu, select a receiver and send the  following message, typed using your default keyboard: ”Hi. Please ignore this message. This message was in the scope of a study that aims to estimate the  energy consumption of sending instant messages with different instant  messaging apps”. In order to monitor the energy consumption of the process,  invoke the following command using a CLI and press any key right after  sending the message: `emanafa` Note: If the installation process or the commands failed, try executing E-Manafa from the [sources].(https://greensoftwarelab.github.io/e-manafa).
-After the monitoring process, some results are reported in the command line.  These results can also be seen in a visually appealing format, by submitting  the results file (manafa resume xxx.yyyy.json) to the dashboard available at https://greensoftwarelab.github.io/manafa-inspector .
+1. Select one of the suggested messaging apps. Monitor the consumption of sending a message to a random subject (preferably, a subject that unlikely will see the message and respond to it during the execution of the process). The testing process must include the step of opening the application from the menu, select a receiver and send the following message, typed using your default keyboard: ”Hi. Please ignore this message. I'm participating in empirical study aiming to analyze the energy performance of instant messaging apps”. In order to monitor the energy consumption of the process, invoke the following command using a CLI and press any key right after  sending the message: `emanafa` Note: If the installation process or the commands failed, try executing E-Manafa from the [sources].(https://greensoftwarelab.github.io/e-manafa).
+After the monitoring process, some results are reported in the command line. These results can also be seen in a visually appealing format, by submitting the results file (manafa resume xxx.yyyy.json) to the dashboard available at https://greensoftwarelab.github.io/manafa-inspector).
 3. Repeat the process 2 more times.
-4. Fill the table available at  https://gdrive....sdasdas  with the values  obtained in the 3 tests.  
+4. Fill the table available at https://gdrive....sdasdas with the values obtained in the 3 tests and the form available at (https://xxxxxxx).
 
 
 # Exercise II Detecting and Repairing Energy Smells in Android source code
 
-In this exercise it is intended to detect and repair some energy smells present in  the source code of the sample app previously downloaded. First of all, you must open the  application in the Android Studio IDE previously downloaded and build and  install the application on your device, in order to verify that you have all the necessary requirements to compile, build and execute the application in the device.
+In this exercise, we will try to show you how you how a developer can detect and repair some energy smells present in his source code using our toolset. Furthermore, you will need the analyze the source code of the demo app previously downloaded. First of all, you must open the  application in the Android Studio IDE previously downloaded and build and  install the application on your device, in order to verify that you have all the necessary requirements to compile, build and execute the application in the device.
 
--- image or gif showing the result of the execution
-
-This application is illustrative of the typical pattern of Android development. It was developed in Java and built using the build system grid. It presents several types of views/screens that are defined in XML format and loaded and transformed through Java classes. This application loads a set of questions (transformed into Question models) contained in a questions.json file that is located in a resources directory (res/raw). These questions also contain associated images, which are also contained in the /res/drawable folder. These questions are loaded into a data structure in the ViewModel class, and then used in 2 different views: QuestionListFragment and SingleQuestionFragment.
+This application is illustrative of the typical pattern of Android development. It was developed in Java and built using the gradle build system. It presents several types of views/screens (also known as Activities and Fragments) that are defined in XML format and loaded and transformed through Java classes. Each Java class extending an Activity or Fragment represents a part of the UI of the application. This demo application is very simple soccer quizz, that loads a set of questions (transformed into Question models) from a questions.json file that is located in a specific resources directory (res/raw). These questions also contain associated images, which are contained in the /res/drawable folder. These questions are loaded into an well-known data structure in the ViewModel class and then used in 2 different views: QuestionListFragment and SingleQuestionFragment.
 
  Below is a diagram that illustrates the typical pattern of navigation over the various views of the application, as well as which components are used in each view.
 
 - diagram img url
 
-The application is currently instrumented with @HunterDebug annotations in order to be able to trace the application methods that are invoked and estimate the energy consumption. Do not remove these annotations and include them in new methods you implement.
+Note: The application is currently instrumented with @HunterDebug annotations in order to be able to trace the application methods that are invoked and estimate the energy consumption. Do not remove these annotations and include them in new methods that you might implement during the exercises.
 
-1. This application contains several energy smells reported in the literature and listed in: xx. These smells can be identified manually, through SonarQube's E-debitum plugin or through Lint. The application contains 4 smells in its source code, and it also has a false positive according to the information provided by E-debitum and an additional smell in XML files. Identify the smells contained in the application and measure the consumption of the methods where they are embedded and check if their resolution results in performance gains. To perform the energy measurement, use the following procedure:
+1. This application contains several energy smells reported in the literature and listed in this [catalogue](). These smells can be identified manually, through SonarQube's E-Debitum plugin or through the Lint that is used by the Android Studio. The application contains  at least 4 smells in its source code, and it also has a false positive according to the information provided by E-debitum and an additional smell in one of the XML files. Identify the smells contained in the application and measure the consumption of the methods where they are embedded. Evaluate if their resolution results in performance gains. To evaluate the impact of the smells in the source code and conduct the energy measurements, execute the following steps: a) Identify the methods with the energy smells a) Start e-manafa from your CLI b) Run the application using Android Studio. d) Perform some work over the application to force the invokation of the methods. e) stop e-manafa and collect the results (the consumption of the smelly- methods) f) Refactor the smells using the proposed solutions in the catalogue. g) Repeat the previous steps until f) and compare the consumption of the methods.  h) Justify the obtained results. 
 
- - In addition to the smells found, there are several energy hotspots that can be improved through simple refactorings. Identify these hotspots with the help of E-Manafa (by consulting the consumption of the application methods) and propose or implement improvements that benefit your energy consumption. Hints: change of image loading method, object caching.
+2. In addition to the smells found, there are several energy hotspots that can be improved through simple refactorings. Identify these hotspots with the help of E-Manafa (by examining the consumption of the application methods) and propose or implement improvements that benefit your energy consumption. Hints: change of image loading method, object caching.
 
- - The application uses some auxiliary APIs to manipulate data files and images. Evaluate the impact of any changes in the energy consumption of the application. Suggestions:
+3. The application uses some auxiliary APIs to manipulate data files and images. Evaluate the impact of any changes in the energy consumption of the application. Suggestions:
 
 - Changed Image loading method ([Picasso](https://square.github.io/picasso/), [Glide](https://github.com/bumptech/glide));
 - Changed JSON loading and handling library([GSON](https://github.com/google/gson), [others](https://www.appbrain.com/stats/libraries/tag/json/ json-parsing-libraries));
