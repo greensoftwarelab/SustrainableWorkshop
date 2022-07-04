@@ -32,10 +32,10 @@
 
 You also going to need a *Nix OS with Android Studio and Android SDK 30 (Android 10) (it can be selected during the Android Studio installation process). The rest of the installation process can be performed by following these steps: 
 1. **Install Android Studio IDE:** Go to the [Android Studio Web Page](https://developer.android.com/studio),  download the latest stable version, and follow the installation instructions. 
-2. **Install E-Manafa Profiler:**  `pip3 install manafa` (assumes that Android SDK is already installed).
+2. **Install E-Manafa Profiler:**  `pip3 install -U manafa` (assumes that Android SDK is already installed).
 3. Clone Android application: `git clone https://github.com/greensoftwarelab/SampleAndroidApp.git`
 4. Finally, open the app on the Android Studio IDE and try to execute it on your device (Click on run), connected via USB to your computer. If the application main screen appears on your Android device, everything worked as supposed.
-5. Try to execute E-Manafa with your device (once again, connected via USB). Try to replicate the process illustrated in this [demo video](https://www.youtube.com/watch?v=vklLgv2_iNo). if everything works like in the video, you are ready to go.  Note: If the installation process or the commands fails, try executing E-Manafa by especifying the full path of the executable (something like `python3 /usr/local/lib/python3.9/site-packages/manafa/main.py`) or from the [sources](https://greensoftwarelab.github.io/e-manafa).
+5. Try to execute E-Manafa with your device (once again, connected via USB). Try to replicate the process illustrated in this [demo video](https://www.youtube.com/watch?v=vklLgv2_iNo). if everything works like in the video, you are ready to go.  Note: If the installation process or the commands fails, try executing E-Manafa by especifying the full path of the executable (something like `python3 /usr/local/lib/python3.9/site-packages/manafa/main.py`) or from the [sources](https://greensoftwarelab.github.io/e-manafa). Also, if you find an error related to unkwnon timezones during the execution, to try set your device timezone to WEST in the system settings.
 
 
 ## Exercise I: Black-Box testing
