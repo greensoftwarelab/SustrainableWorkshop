@@ -89,12 +89,12 @@ Note: The application is currently instrumented with @HunterDebug annotations in
 
 ### E-Manafa
 
-Possible errors and solutions:
-1. Device not found: 
+Possible errors and respective solutions:
+1. Device not found / unable to find adb: 
 			- change the USB configuration to file transfer.
 			- set the following environment variables: 
 		
-		export ANDROID_HOME=$HOME/Android/Sdk 
+		export ANDROID_HOME=$HOME/android-sdk # or ANDROID_HOME=$HOME/Android/Sdk, it varies across sistems
 		export PATH=$ANDROID_HOME/platform-tools:$PATH
 2. Error after profiling:
 	- Provide the full path to the power profile file when invoking e-manafa:
