@@ -1,3 +1,4 @@
+
   
 
 # SustrainableWorkshop
@@ -82,3 +83,19 @@ Note: The application is currently instrumented with @HunterDebug annotations in
 - Change the Image loading method in the onBindViewHolder method (Hint: use [Picasso](https://square.github.io/picasso/) or [Glide](https://github.com/bumptech/glide));
 - Change JSON loading and handling library([GSON](https://github.com/google/gson), [others](https://www.appbrain.com/stats/libraries/tag/json/json-parsing-libraries));
 - Change the data format (from JSON to CSV, DB with sqlite);
+
+
+## Troubleshoot
+
+### E-Manafa
+
+Possible errors and solutions:
+1. Device not found: 
+			- change the USB configuration to file transfer.
+			- set the following environment variables: 
+		
+		export ANDROID_HOME=$HOME/Android/Sdk 
+		export PATH=$ANDROID_HOME/platform-tools:$PATH
+2. Error after profiling:
+	- Provide the full path to the power profile file when invoking e-manafa:
+		`emanafa -p /usr/local/lib/python3.9/site-packages/manafa/resources/profiles/power_profile.xml`
