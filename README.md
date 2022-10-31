@@ -16,7 +16,7 @@
 - Android Studio IDE (and consequently, Android SDK);
 - 1 Android device;
 - E-Manafa profiler;
-- Demo Android application;
+- [Demo Android application](https://github.com/greensoftwarelab/SampleAndroidApp);
 - BasiC Java / OOP knowledge.
 
 
