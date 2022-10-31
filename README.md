@@ -76,7 +76,7 @@ Note: The application is currently instrumented with @HunterDebug annotations in
 	- g) Repeat the previous steps until f) and compare the consumption of the methods. 
 	-  h) Justify the obtained results. 
 
-2. In addition to the smells found, several energy hotspots can be improved through simple refactorings. Identify these hotspots with the help of E-Manafa (by examining the consumption of the application methods) and propose or implement improvements that benefit your energy consumption. Hints: change of image loading method, object caching.
+2. In addition to the well-known energy smells that can be found, several energy hotspots can also be improved through simple refactorings. Identify these hotspots with the help of E-Manafa (by examining the consumption of some of the application methods) and propose or implement improvements that can improve energy consumption. Hints: change of image loading method, object caching.
 
 3. The application uses some auxiliary APIs to manipulate data files and images. Evaluate the impact of any changes in the energy consumption of the application. Suggestions:
 
